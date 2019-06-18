@@ -1,0 +1,15 @@
+C:\Users\tomna\OneDrive\Visual Studio Projects\SMBLauncherv2\bin\Debug\SMBLauncherv2.exe.config
+C:\Users\tomna\OneDrive\Visual Studio Projects\SMBLauncherv2\bin\Debug\SMBLauncherv2.exe.manifest
+C:\Users\tomna\OneDrive\Visual Studio Projects\SMBLauncherv2\bin\Debug\SMBLauncherv2.application
+C:\Users\tomna\OneDrive\Visual Studio Projects\SMBLauncherv2\bin\Debug\SMBLauncherv2.exe
+C:\Users\tomna\OneDrive\Visual Studio Projects\SMBLauncherv2\bin\Debug\SMBLauncherv2.pdb
+C:\Users\tomna\OneDrive\Visual Studio Projects\SMBLauncherv2\obj\Debug\SMBLauncherv2.CheckForUpdatesForm.resources
+C:\Users\tomna\OneDrive\Visual Studio Projects\SMBLauncherv2\obj\Debug\SMBLauncherv2.MainForm.resources
+C:\Users\tomna\OneDrive\Visual Studio Projects\SMBLauncherv2\obj\Debug\SMBLauncherv2.Properties.Resources.resources
+C:\Users\tomna\OneDrive\Visual Studio Projects\SMBLauncherv2\obj\Debug\SMBLauncherv2.csproj.GenerateResource.cache
+C:\Users\tomna\OneDrive\Visual Studio Projects\SMBLauncherv2\obj\Debug\SMBLauncherv2.csproj.CoreCompileInputs.cache
+C:\Users\tomna\OneDrive\Visual Studio Projects\SMBLauncherv2\obj\Debug\SMBLauncherv2.TrustInfo.xml
+C:\Users\tomna\OneDrive\Visual Studio Projects\SMBLauncherv2\obj\Debug\SMBLauncherv2.exe.manifest
+C:\Users\tomna\OneDrive\Visual Studio Projects\SMBLauncherv2\obj\Debug\SMBLauncherv2.application
+C:\Users\tomna\OneDrive\Visual Studio Projects\SMBLauncherv2\obj\Debug\SMBLauncherv2.exe
+C:\Users\tomna\OneDrive\Visual Studio Projects\SMBLauncherv2\obj\Debug\SMBLauncherv2.pdb
