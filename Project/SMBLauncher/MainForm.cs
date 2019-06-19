@@ -19,10 +19,13 @@ namespace SMBLauncher
         {
             Console.WriteLine("MainForm::MainForm");
 
-            CheckForUpdatesForm cfuForm = new CheckForUpdatesForm();
-            cfuForm.Shown += new EventHandler(cfuForm.RunCheck);
-            cfuForm.ShowDialog();
-            cfuForm.Shown -= new EventHandler(cfuForm.RunCheck);
+            if (Program.CheckForInternetConnection())
+            {
+                CheckForUpdatesForm cfuForm = new CheckForUpdatesForm();
+                cfuForm.Shown += new EventHandler(cfuForm.RunCheck);
+                cfuForm.ShowDialog();
+                cfuForm.Shown -= new EventHandler(cfuForm.RunCheck);
+            }
 
             InitializeComponent();
 
@@ -87,8 +90,8 @@ namespace SMBLauncher
             {
                 Console.WriteLine("Could not find the smb folder");
             }
-            
 
+            cbUseAnalog.CheckedChanged += new EventHandler(CbUseAnalog_CheckedChanged);
 
             if (data.muted)
                 pbMute.Image = Properties.Resources.speaker_muted;
