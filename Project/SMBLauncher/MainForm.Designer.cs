@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.pSettings = new System.Windows.Forms.Panel();
             this.pLaunchOptions = new System.Windows.Forms.Panel();
-            this.cbDeleteDataOnPlay = new System.Windows.Forms.CheckBox();
+            this.cbDeleteSaveData = new System.Windows.Forms.CheckBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.pControls = new System.Windows.Forms.Panel();
@@ -66,6 +66,7 @@
             this.pbPlay = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.pSettings.SuspendLayout();
             this.pLaunchOptions.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
@@ -106,7 +107,8 @@
             // 
             // pLaunchOptions
             // 
-            this.pLaunchOptions.Controls.Add(this.cbDeleteDataOnPlay);
+            this.pLaunchOptions.Controls.Add(this.label2);
+            this.pLaunchOptions.Controls.Add(this.cbDeleteSaveData);
             this.pLaunchOptions.Controls.Add(this.pictureBox8);
             this.pLaunchOptions.Controls.Add(this.pictureBox9);
             this.pLaunchOptions.Location = new System.Drawing.Point(8, 223);
@@ -115,18 +117,18 @@
             this.pLaunchOptions.TabIndex = 10;
             this.pLaunchOptions.Visible = false;
             // 
-            // cbDeleteDataOnPlay
+            // cbDeleteSaveData
             // 
-            this.cbDeleteDataOnPlay.AutoSize = true;
-            this.cbDeleteDataOnPlay.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold);
-            this.cbDeleteDataOnPlay.ForeColor = System.Drawing.Color.White;
-            this.cbDeleteDataOnPlay.Location = new System.Drawing.Point(5, 94);
-            this.cbDeleteDataOnPlay.Name = "cbDeleteDataOnPlay";
-            this.cbDeleteDataOnPlay.Size = new System.Drawing.Size(441, 32);
-            this.cbDeleteDataOnPlay.TabIndex = 5;
-            this.cbDeleteDataOnPlay.Text = "DELETE DATA ON PLAY (ANY% RUNS)";
-            this.cbDeleteDataOnPlay.UseVisualStyleBackColor = true;
-            this.cbDeleteDataOnPlay.CheckedChanged += new System.EventHandler(this.CbDeleteDataOnPlay_CheckedChanged);
+            this.cbDeleteSaveData.AutoSize = true;
+            this.cbDeleteSaveData.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold);
+            this.cbDeleteSaveData.ForeColor = System.Drawing.Color.White;
+            this.cbDeleteSaveData.Location = new System.Drawing.Point(5, 123);
+            this.cbDeleteSaveData.Name = "cbDeleteSaveData";
+            this.cbDeleteSaveData.Size = new System.Drawing.Size(402, 32);
+            this.cbDeleteSaveData.TabIndex = 5;
+            this.cbDeleteSaveData.Text = "DELETE SAVE DATA (ANY% RUNS)";
+            this.cbDeleteSaveData.UseVisualStyleBackColor = true;
+            this.cbDeleteSaveData.CheckedChanged += new System.EventHandler(this.CbDeleteSaveData_CheckedChanged);
             // 
             // pictureBox8
             // 
@@ -740,13 +742,24 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Black;
-            this.label1.Font = new System.Drawing.Font("Consolas", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Consolas", 6F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label1.Location = new System.Drawing.Point(89, 981);
+            this.label1.Location = new System.Drawing.Point(482, 965);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1710, 38);
+            this.label1.Size = new System.Drawing.Size(1330, 42);
             this.label1.TabIndex = 10;
             this.label1.Text = resources.GetString("label1.Text");
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Consolas", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(0, 91);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(493, 28);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "ACTIONS PERFORMED EVERYTIME AT LAUNCH";
             // 
             // MainForm
             // 
@@ -837,7 +850,8 @@
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.PictureBox pbLaunchOptions;
-        private System.Windows.Forms.CheckBox cbDeleteDataOnPlay;
+        private System.Windows.Forms.CheckBox cbDeleteSaveData;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }

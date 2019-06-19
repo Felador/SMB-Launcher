@@ -98,7 +98,7 @@ namespace SMBLauncher
             else
                 pbMute.Image = Properties.Resources.speaker;
 
-            cbDeleteDataOnPlay.Checked = data.deleteDataOnPlay;
+            cbDeleteSaveData.Checked = data.deleteDataOnPlay;
 
             tbSteamLocation.Text = data.steamLocation;
         }
@@ -432,7 +432,7 @@ namespace SMBLauncher
                 pbMute.Image = Properties.Resources.speaker;
         }
 
-        private void CbDeleteDataOnPlay_CheckedChanged(object sender, EventArgs e)
+        private void CbDeleteSaveData_CheckedChanged(object sender, EventArgs e)
         {
             if (!data.muted)
             {
@@ -441,7 +441,7 @@ namespace SMBLauncher
                 snd.Play();
             }
 
-            data.deleteDataOnPlay = cbDeleteDataOnPlay.Checked;
+            data.deleteDataOnPlay = cbDeleteSaveData.Checked;
         }
 
         private void CbUseAnalog_CheckedChanged(object sender, EventArgs e)
