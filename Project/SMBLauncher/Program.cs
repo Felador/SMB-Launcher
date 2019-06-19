@@ -11,7 +11,7 @@ namespace SMBLauncher
     class Program
     {
 
-        public static int _ID = 3;
+        public static int _ID = 4;
 
         static void Main(string[] args)
         {
