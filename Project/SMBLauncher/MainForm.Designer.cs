@@ -31,6 +31,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.pSettings = new System.Windows.Forms.Panel();
             this.pLaunchOptions = new System.Windows.Forms.Panel();
+            this.lblLivesplitDownload = new System.Windows.Forms.Label();
+            this.tbLivesplit = new System.Windows.Forms.TextBox();
+            this.cbLivesplit = new System.Windows.Forms.CheckBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.cbDeleteSaveData = new System.Windows.Forms.CheckBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
@@ -66,7 +70,6 @@
             this.pbPlay = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.pSettings.SuspendLayout();
             this.pLaunchOptions.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
@@ -107,15 +110,67 @@
             // 
             // pLaunchOptions
             // 
+            this.pLaunchOptions.Controls.Add(this.lblLivesplitDownload);
+            this.pLaunchOptions.Controls.Add(this.tbLivesplit);
+            this.pLaunchOptions.Controls.Add(this.cbLivesplit);
             this.pLaunchOptions.Controls.Add(this.label2);
             this.pLaunchOptions.Controls.Add(this.cbDeleteSaveData);
             this.pLaunchOptions.Controls.Add(this.pictureBox8);
             this.pLaunchOptions.Controls.Add(this.pictureBox9);
-            this.pLaunchOptions.Location = new System.Drawing.Point(8, 223);
+            this.pLaunchOptions.Location = new System.Drawing.Point(3, 225);
             this.pLaunchOptions.Name = "pLaunchOptions";
             this.pLaunchOptions.Size = new System.Drawing.Size(763, 267);
             this.pLaunchOptions.TabIndex = 10;
             this.pLaunchOptions.Visible = false;
+            // 
+            // lblLivesplitDownload
+            // 
+            this.lblLivesplitDownload.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblLivesplitDownload.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold);
+            this.lblLivesplitDownload.ForeColor = System.Drawing.Color.White;
+            this.lblLivesplitDownload.Location = new System.Drawing.Point(618, 157);
+            this.lblLivesplitDownload.Name = "lblLivesplitDownload";
+            this.lblLivesplitDownload.Size = new System.Drawing.Size(142, 39);
+            this.lblLivesplitDownload.TabIndex = 9;
+            this.lblLivesplitDownload.Text = "DOWNLOAD";
+            this.lblLivesplitDownload.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblLivesplitDownload.Click += new System.EventHandler(this.LblLivesplitDownload_Click);
+            // 
+            // tbLivesplit
+            // 
+            this.tbLivesplit.BackColor = System.Drawing.Color.Black;
+            this.tbLivesplit.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbLivesplit.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold);
+            this.tbLivesplit.ForeColor = System.Drawing.Color.White;
+            this.tbLivesplit.Location = new System.Drawing.Point(166, 157);
+            this.tbLivesplit.Name = "tbLivesplit";
+            this.tbLivesplit.Size = new System.Drawing.Size(446, 36);
+            this.tbLivesplit.TabIndex = 8;
+            this.tbLivesplit.TextChanged += new System.EventHandler(this.TbLivesplit_TextChanged);
+            // 
+            // cbLivesplit
+            // 
+            this.cbLivesplit.AutoSize = true;
+            this.cbLivesplit.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold);
+            this.cbLivesplit.ForeColor = System.Drawing.Color.White;
+            this.cbLivesplit.Location = new System.Drawing.Point(5, 161);
+            this.cbLivesplit.Name = "cbLivesplit";
+            this.cbLivesplit.Size = new System.Drawing.Size(155, 32);
+            this.cbLivesplit.TabIndex = 7;
+            this.cbLivesplit.Text = "Livesplit";
+            this.cbLivesplit.UseVisualStyleBackColor = true;
+            this.cbLivesplit.CheckedChanged += new System.EventHandler(this.CbLivesplit_CheckedChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Consolas", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(0, 91);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(493, 28);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "ACTIONS PERFORMED EVERYTIME AT LAUNCH";
             // 
             // cbDeleteSaveData
             // 
@@ -159,7 +214,7 @@
             this.pControls.Controls.Add(this.pictureBox2);
             this.pControls.Controls.Add(this.pictureBox3);
             this.pControls.Controls.Add(this.pControlsPc);
-            this.pControls.Location = new System.Drawing.Point(3, 112);
+            this.pControls.Location = new System.Drawing.Point(3, 114);
             this.pControls.Name = "pControls";
             this.pControls.Size = new System.Drawing.Size(774, 105);
             this.pControls.TabIndex = 9;
@@ -549,7 +604,7 @@
             this.pSteamLocation.Controls.Add(this.pbSteamExe);
             this.pSteamLocation.Location = new System.Drawing.Point(3, 3);
             this.pSteamLocation.Name = "pSteamLocation";
-            this.pSteamLocation.Size = new System.Drawing.Size(774, 103);
+            this.pSteamLocation.Size = new System.Drawing.Size(774, 105);
             this.pSteamLocation.TabIndex = 8;
             this.pSteamLocation.Visible = false;
             // 
@@ -750,17 +805,6 @@
             this.label1.TabIndex = 10;
             this.label1.Text = resources.GetString("label1.Text");
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Consolas", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(0, 91);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(493, 28);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "ACTIONS PERFORMED EVERYTIME AT LAUNCH";
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -853,5 +897,8 @@
         private System.Windows.Forms.CheckBox cbDeleteSaveData;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.CheckBox cbLivesplit;
+        private System.Windows.Forms.TextBox tbLivesplit;
+        private System.Windows.Forms.Label lblLivesplitDownload;
     }
 }

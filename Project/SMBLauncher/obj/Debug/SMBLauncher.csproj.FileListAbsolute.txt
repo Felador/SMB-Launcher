@@ -12,3 +12,4 @@ C:\Users\tomna\Documents\GitHub\SMB-Launcher\Project\SMBLauncher\obj\Debug\SMBLa
 C:\Users\tomna\Documents\GitHub\SMB-Launcher\Project\SMBLauncher\obj\Debug\SMBLauncher.application
 C:\Users\tomna\Documents\GitHub\SMB-Launcher\Project\SMBLauncher\obj\Debug\SMBLauncher.exe
 C:\Users\tomna\Documents\GitHub\SMB-Launcher\Project\SMBLauncher\obj\Debug\SMBLauncher.pdb
+C:\Users\tomna\Documents\GitHub\SMB-Launcher\Project\SMBLauncher\obj\Debug\SMBLauncher.csprojAssemblyReference.cache

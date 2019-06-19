@@ -11,7 +11,10 @@ namespace SMBLauncher
     {
         public string steamLocation = "";
         public bool muted = false;
+
         public bool deleteDataOnPlay = false;
+        public bool openLivesplit = false;
+        public string livesplitLocation = "";
 
         public Ctrls ctrls = new Ctrls();
 

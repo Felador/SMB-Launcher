@@ -42,24 +42,24 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SMBLauncher.exe" size="2402272">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SMBLauncher.exe" size="2404320">
       <assemblyIdentity name="SMBLauncher" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>ODIWI/FMohgem9rXCFbVOgSYes7tcQy6pENGkegUiS8=</dsig:DigestValue>
+        <dsig:DigestValue>PJ7sNso4vLLVFbGMqAAWP87pmDXTt5ejJaG6SwRuzyU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="SMBLauncher.exe.config" size="189">
+  <file name="SMBLauncher.exe.config" size="184">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>R+Wg8QGvQVHX8T0ta/qbhH1bXkqY0fRnS3wBV3J0bN8=</dsig:DigestValue>
+      <dsig:DigestValue>X+GtgC9o18R9u9jmAWK6iKuu0WLaXTgchdPkk1MRli4=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>

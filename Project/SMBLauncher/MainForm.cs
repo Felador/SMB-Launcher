@@ -101,6 +101,9 @@ namespace SMBLauncher
             cbDeleteSaveData.Checked = data.deleteDataOnPlay;
 
             tbSteamLocation.Text = data.steamLocation;
+
+            cbLivesplit.Checked = data.openLivesplit;
+            tbLivesplit.Text = data.livesplitLocation;
         }
 
         private bool AutoSearchForSteamFolder()
@@ -298,6 +301,19 @@ namespace SMBLauncher
                 snd.Play();
             }
 
+            if(data.openLivesplit)
+            {
+                try
+                {
+                    Process.Start(data.livesplitLocation);
+                }
+                catch
+                {
+                    if (MessageBox.Show("Unable to open Livesplit. Continue?", "Error", MessageBoxButtons.YesNo) == DialogResult.No)
+                        return;
+                }
+            }
+
             if (!Directory.Exists(data.steamLocation) || !File.Exists(steamExe))
             {
                 MessageBox.Show("Steam not found! Please configure your steam location so that the entered value is the folder containing the steam EXE. Please leave the EXE file OUT of your input.", "Error");
@@ -454,6 +470,21 @@ namespace SMBLauncher
             }
 
             data.ctrls.gamepad.useAnalog = cbUseAnalog.Checked;
+        }
+
+        private void LblLivesplitDownload_Click(object sender, EventArgs e)
+        {
+            Process.Start("http://livesplit.org/downloads/");
+        }
+
+        private void CbLivesplit_CheckedChanged(object sender, EventArgs e)
+        {
+            data.openLivesplit = cbLivesplit.Checked;
+        }
+
+        private void TbLivesplit_TextChanged(object sender, EventArgs e)
+        {
+            data.livesplitLocation = tbLivesplit.Text;
         }
     }
 }
