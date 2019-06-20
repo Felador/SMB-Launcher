@@ -57,9 +57,8 @@
             this.lblStatus.AutoSize = true;
             this.lblStatus.Location = new System.Drawing.Point(76, 68);
             this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(172, 20);
+            this.lblStatus.Size = new System.Drawing.Size(0, 20);
             this.lblStatus.TabIndex = 9;
-            this.lblStatus.Text = "Checking for updates...";
             // 
             // label3
             // 
@@ -103,6 +102,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CheckForUpdatesForm";
             this.Text = "CheckForUpdatesForm";
+            this.Shown += new System.EventHandler(this.CheckForUpdatesForm_Shown);
             this.ResumeLayout(false);
             this.PerformLayout();
 

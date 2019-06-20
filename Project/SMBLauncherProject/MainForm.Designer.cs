@@ -70,6 +70,7 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pbSpeedrun = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPlay)).BeginInit();
             this.pSteamLocation.SuspendLayout();
@@ -93,6 +94,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSpeedrun)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox3
@@ -144,7 +146,7 @@
             this.lblAutoSearch.Size = new System.Drawing.Size(110, 21);
             this.lblAutoSearch.TabIndex = 6;
             this.lblAutoSearch.Text = "AUTO SEARCH";
-            this.lblAutoSearch.DoubleClick += new System.EventHandler(this.LblAutoSearch_Click);
+            this.lblAutoSearch.Click += new System.EventHandler(this.LblAutoSearch_Click);
             // 
             // pbSteamExeText
             // 
@@ -802,11 +804,25 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PictureBox1_MouseDown);
             // 
+            // pbSpeedrun
+            // 
+            this.pbSpeedrun.BackColor = System.Drawing.Color.Black;
+            this.pbSpeedrun.BackgroundImage = global::SMBLauncherProject.Properties.Resources.speedrun;
+            this.pbSpeedrun.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbSpeedrun.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbSpeedrun.Location = new System.Drawing.Point(89, 983);
+            this.pbSpeedrun.Name = "pbSpeedrun";
+            this.pbSpeedrun.Size = new System.Drawing.Size(36, 36);
+            this.pbSpeedrun.TabIndex = 22;
+            this.pbSpeedrun.TabStop = false;
+            this.pbSpeedrun.Click += new System.EventHandler(this.PbSpeedrun_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1828, 1024);
+            this.Controls.Add(this.pbSpeedrun);
             this.Controls.Add(this.pbPlay);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pbLaunchOptions);
@@ -847,6 +863,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSpeedrun)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -895,6 +912,7 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pbSpeedrun;
     }
 }
 

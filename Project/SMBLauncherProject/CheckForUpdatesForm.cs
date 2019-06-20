@@ -25,8 +25,27 @@ namespace SMBLauncherProject
         string filePath = "";
         string webPath = "";
 
-        public void RunCheck(object sender, EventArgs e)
+        private void CheckForUpdatesForm_Shown(object sender, EventArgs e)
         {
+            MethodInvoker checkInvoker = new MethodInvoker(RunCheck);
+            checkInvoker.BeginInvoke(null, null);
+        }
+
+        public void RunCheck()
+        {
+            this.Invoke((MethodInvoker)delegate
+            {
+                lblStatus.Text = "Checking for an internet connection...";
+            });
+
+            if (!Program.CheckForInternetConnection())
+                Close();
+
+            this.Invoke((MethodInvoker)delegate
+            {
+                lblStatus.Text = "Internet connection found. Checking for a updates...";
+            });
+
             string url = "https://tomnaughton.net/projects/smbl/v2/";
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
             using (HttpWebResponse response = (HttpWebResponse)request.GetResponse())
@@ -39,7 +58,10 @@ namespace SMBLauncherProject
                     Console.WriteLine("Matches: " + matches.Count);
                     if (matches.Count > Program._ID)
                     {
-                        lblStatus.Text = "New version found";
+                        this.Invoke((MethodInvoker)delegate
+                        {
+                            lblStatus.Text = "New version found";
+                        });
 
                         if (MessageBox.Show("New version found. Download now?", "Update", MessageBoxButtons.YesNo) == DialogResult.Yes)
                         {
@@ -48,12 +70,15 @@ namespace SMBLauncherProject
                             startDownload();
                         }
                         else
-                            Close();
+                            this.Invoke((MethodInvoker)delegate { Close(); });
                     }
                     else
                     {
-                        lblStatus.Text = "No new version";
-                        Close();
+                        this.Invoke((MethodInvoker)delegate
+                        {
+                            lblStatus.Text = "No new version";
+                            Close();
+                        });
                     }
                 }
             }

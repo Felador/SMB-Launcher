@@ -18,14 +18,8 @@ namespace SMBLauncherProject
         public MainForm()
         {
             Console.WriteLine("MainForm::MainForm");
-
-            if (Program.CheckForInternetConnection())
-            {
-                CheckForUpdatesForm cfuForm = new CheckForUpdatesForm();
-                cfuForm.Shown += new EventHandler(cfuForm.RunCheck);
-                cfuForm.ShowDialog();
-                cfuForm.Shown -= new EventHandler(cfuForm.RunCheck);
-            }
+            CheckForUpdatesForm cfuForm = new CheckForUpdatesForm();
+            cfuForm.ShowDialog();
 
             InitializeComponent();
 
@@ -413,24 +407,7 @@ namespace SMBLauncherProject
 
         private void LblAutoSearch_Click(object sender, EventArgs e)
         {
-            if (!data.muted)
-            {
-                Stream str = Properties.Resources.blip2;
-                System.Media.SoundPlayer snd = new System.Media.SoundPlayer(str);
-                snd.Play();
-            }
 
-            bool result = AutoSearchForSteamFolder();
-            tbSteamLocation.Text = data.steamLocation;
-
-            if (!result)
-            {
-                MessageBox.Show("Unable to find Steam. This can happen when the Steam installer was not run on this machine and the files were simply transferred over or if Steam is installed on an external drive. To manually find Steam, right-click a Steam shortcut and go to file location or press Start and search for Steam. Right-click it and click 'Open File Location'. Then right-click this shortcut and go to the file location.", "Error");
-            }
-            else
-            {
-                MessageBox.Show("Steam was found successfully!", "Auto Search");
-            }
         }
 
         private void PbPatreon_Click(object sender, EventArgs e)
@@ -485,6 +462,11 @@ namespace SMBLauncherProject
         private void TbLivesplit_TextChanged(object sender, EventArgs e)
         {
             data.livesplitLocation = tbLivesplit.Text;
+        }
+
+        private void PbSpeedrun_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://www.speedrun.com/smb/");
         }
     }
 }
