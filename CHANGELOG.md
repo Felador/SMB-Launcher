@@ -25,10 +25,12 @@
 
 ### Fixed
 
-## [0.0.0.0] - 2019-06-XX
+## [2.21.0.3] - 2019-06-21
 ### Added
 - MINOR Button that opens the SMB Discord.
 - MINOR Cfu form's progress bar shows overall progress.
+- MINOR Cfu form icon.
+- MINOR MainForm icon.
 
 ### Changed
 - MINOR Check for internet connection moved to CheckForUpdatesForm.

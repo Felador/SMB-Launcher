@@ -31,7 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.pSteamLocation = new System.Windows.Forms.Panel();
             this.lblAutoSearch = new System.Windows.Forms.Label();
+            this.pbSteamExeText = new System.Windows.Forms.PictureBox();
             this.tbSteamLocation = new System.Windows.Forms.TextBox();
+            this.pbSteamExe = new System.Windows.Forms.PictureBox();
             this.pControlsPc = new System.Windows.Forms.Panel();
             this.cbSpecial = new System.Windows.Forms.ComboBox();
             this.cbJump = new System.Windows.Forms.ComboBox();
@@ -48,11 +50,18 @@
             this.cbLivesplit = new System.Windows.Forms.CheckBox();
             this.label2 = new System.Windows.Forms.Label();
             this.cbDeleteSaveData = new System.Windows.Forms.CheckBox();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.pControls = new System.Windows.Forms.Panel();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pControlsController = new System.Windows.Forms.Panel();
             this.cbUseAnalog = new System.Windows.Forms.CheckBox();
             this.cbGPSpecial = new System.Windows.Forms.ComboBox();
             this.cbGPJump = new System.Windows.Forms.ComboBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pbSave = new System.Windows.Forms.PictureBox();
             this.pbDiscord = new System.Windows.Forms.PictureBox();
             this.pbSpeedrun = new System.Windows.Forms.PictureBox();
             this.pbPlay = new System.Windows.Forms.PictureBox();
@@ -61,23 +70,23 @@
             this.pbControls = new System.Windows.Forms.PictureBox();
             this.pbSteam = new System.Windows.Forms.PictureBox();
             this.pbArrow = new System.Windows.Forms.PictureBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pbSteamExeText = new System.Windows.Forms.PictureBox();
-            this.pbSteamExe = new System.Windows.Forms.PictureBox();
-            this.pbSave = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pbMute = new System.Windows.Forms.PictureBox();
             this.pSteamLocation.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSteamExeText)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSteamExe)).BeginInit();
             this.pControlsPc.SuspendLayout();
             this.pSettings.SuspendLayout();
             this.pLaunchOptions.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             this.pControls.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.pControlsController.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSave)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbDiscord)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbSpeedrun)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPlay)).BeginInit();
@@ -86,15 +95,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbControls)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbSteam)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbArrow)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbSteamExeText)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbSteamExe)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbSave)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMute)).BeginInit();
             this.SuspendLayout();
@@ -125,6 +125,17 @@
             this.lblAutoSearch.Text = "AUTO SEARCH";
             this.lblAutoSearch.Click += new System.EventHandler(this.LblAutoSearch_Click);
             // 
+            // pbSteamExeText
+            // 
+            this.pbSteamExeText.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
+            this.pbSteamExeText.BackgroundImage = global::SMBLauncherProject.Properties.Resources.steamexe_black;
+            this.pbSteamExeText.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbSteamExeText.Location = new System.Drawing.Point(79, 20);
+            this.pbSteamExeText.Name = "pbSteamExeText";
+            this.pbSteamExeText.Size = new System.Drawing.Size(610, 35);
+            this.pbSteamExeText.TabIndex = 4;
+            this.pbSteamExeText.TabStop = false;
+            // 
             // tbSteamLocation
             // 
             this.tbSteamLocation.BackColor = System.Drawing.Color.Black;
@@ -136,6 +147,16 @@
             this.tbSteamLocation.Size = new System.Drawing.Size(763, 61);
             this.tbSteamLocation.TabIndex = 5;
             this.tbSteamLocation.Text = "AAAAAA";
+            // 
+            // pbSteamExe
+            // 
+            this.pbSteamExe.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pbSteamExe.BackgroundImage")));
+            this.pbSteamExe.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbSteamExe.Location = new System.Drawing.Point(5, 3);
+            this.pbSteamExe.Name = "pbSteamExe";
+            this.pbSteamExe.Size = new System.Drawing.Size(763, 85);
+            this.pbSteamExe.TabIndex = 0;
+            this.pbSteamExe.TabStop = false;
             // 
             // pControlsPc
             // 
@@ -529,6 +550,27 @@
             this.cbDeleteSaveData.Text = "DELETE SAVE DATA (ANY% RUNS)";
             this.cbDeleteSaveData.UseVisualStyleBackColor = true;
             // 
+            // pictureBox8
+            // 
+            this.pictureBox8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
+            this.pictureBox8.BackgroundImage = global::SMBLauncherProject.Properties.Resources.launch_options_black;
+            this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox8.Location = new System.Drawing.Point(79, 20);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(610, 35);
+            this.pictureBox8.TabIndex = 4;
+            this.pictureBox8.TabStop = false;
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox9.BackgroundImage")));
+            this.pictureBox9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox9.Location = new System.Drawing.Point(5, 3);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(763, 85);
+            this.pictureBox9.TabIndex = 0;
+            this.pictureBox9.TabStop = false;
+            // 
             // pControls
             // 
             this.pControls.Controls.Add(this.pictureBox5);
@@ -542,6 +584,15 @@
             this.pControls.Size = new System.Drawing.Size(774, 102);
             this.pControls.TabIndex = 9;
             this.pControls.Visible = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox5.Location = new System.Drawing.Point(5, 272);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(158, 35);
+            this.pictureBox5.TabIndex = 10;
+            this.pictureBox5.TabStop = false;
             // 
             // pControlsController
             // 
@@ -600,6 +651,49 @@
             this.cbGPJump.Name = "cbGPJump";
             this.cbGPJump.Size = new System.Drawing.Size(147, 36);
             this.cbGPJump.TabIndex = 2;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox4.Location = new System.Drawing.Point(5, 94);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(100, 35);
+            this.pictureBox4.TabIndex = 8;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
+            this.pictureBox2.BackgroundImage = global::SMBLauncherProject.Properties.Resources.controls_black;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox2.Location = new System.Drawing.Point(79, 20);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(610, 35);
+            this.pictureBox2.TabIndex = 4;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.BackgroundImage")));
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox3.Location = new System.Drawing.Point(5, 3);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(763, 85);
+            this.pictureBox3.TabIndex = 0;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pbSave
+            // 
+            this.pbSave.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.pbSave.BackgroundImage = global::SMBLauncherProject.Properties.Resources.save;
+            this.pbSave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbSave.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbSave.Location = new System.Drawing.Point(3, 525);
+            this.pbSave.Name = "pbSave";
+            this.pbSave.Size = new System.Drawing.Size(768, 35);
+            this.pbSave.TabIndex = 6;
+            this.pbSave.TabStop = false;
+            this.pbSave.Click += new System.EventHandler(this.Save);
             // 
             // pbDiscord
             // 
@@ -712,100 +806,6 @@
             this.pbArrow.TabStop = false;
             this.pbArrow.Visible = false;
             // 
-            // pictureBox8
-            // 
-            this.pictureBox8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
-            this.pictureBox8.BackgroundImage = global::SMBLauncherProject.Properties.Resources.launch_options_black;
-            this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox8.Location = new System.Drawing.Point(79, 20);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(610, 35);
-            this.pictureBox8.TabIndex = 4;
-            this.pictureBox8.TabStop = false;
-            // 
-            // pictureBox9
-            // 
-            this.pictureBox9.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox9.BackgroundImage")));
-            this.pictureBox9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox9.Location = new System.Drawing.Point(5, 3);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(763, 85);
-            this.pictureBox9.TabIndex = 0;
-            this.pictureBox9.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox5.Location = new System.Drawing.Point(5, 272);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(158, 35);
-            this.pictureBox5.TabIndex = 10;
-            this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox4.Location = new System.Drawing.Point(5, 94);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(100, 35);
-            this.pictureBox4.TabIndex = 8;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
-            this.pictureBox2.BackgroundImage = global::SMBLauncherProject.Properties.Resources.controls_black;
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox2.Location = new System.Drawing.Point(79, 20);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(610, 35);
-            this.pictureBox2.TabIndex = 4;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.BackgroundImage")));
-            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox3.Location = new System.Drawing.Point(5, 3);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(763, 85);
-            this.pictureBox3.TabIndex = 0;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pbSteamExeText
-            // 
-            this.pbSteamExeText.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
-            this.pbSteamExeText.BackgroundImage = global::SMBLauncherProject.Properties.Resources.steamexe_black;
-            this.pbSteamExeText.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pbSteamExeText.Location = new System.Drawing.Point(79, 20);
-            this.pbSteamExeText.Name = "pbSteamExeText";
-            this.pbSteamExeText.Size = new System.Drawing.Size(610, 35);
-            this.pbSteamExeText.TabIndex = 4;
-            this.pbSteamExeText.TabStop = false;
-            // 
-            // pbSteamExe
-            // 
-            this.pbSteamExe.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pbSteamExe.BackgroundImage")));
-            this.pbSteamExe.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pbSteamExe.Location = new System.Drawing.Point(5, 3);
-            this.pbSteamExe.Name = "pbSteamExe";
-            this.pbSteamExe.Size = new System.Drawing.Size(763, 85);
-            this.pbSteamExe.TabIndex = 0;
-            this.pbSteamExe.TabStop = false;
-            // 
-            // pbSave
-            // 
-            this.pbSave.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.pbSave.BackgroundImage = global::SMBLauncherProject.Properties.Resources.save;
-            this.pbSave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pbSave.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbSave.Location = new System.Drawing.Point(3, 525);
-            this.pbSave.Name = "pbSave";
-            this.pbSave.Size = new System.Drawing.Size(768, 35);
-            this.pbSave.TabIndex = 6;
-            this.pbSave.TabStop = false;
-            this.pbSave.Click += new System.EventHandler(this.Save);
-            // 
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = global::SMBLauncherProject.Properties.Resources.MainMenu;
@@ -851,17 +851,27 @@
             this.Controls.Add(this.pSettings);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainForm";
             this.Text = "SMB Launcher";
             this.pSteamLocation.ResumeLayout(false);
             this.pSteamLocation.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSteamExeText)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSteamExe)).EndInit();
             this.pControlsPc.ResumeLayout(false);
             this.pSettings.ResumeLayout(false);
             this.pLaunchOptions.ResumeLayout(false);
             this.pLaunchOptions.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             this.pControls.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.pControlsController.ResumeLayout(false);
             this.pControlsController.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSave)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbDiscord)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbSpeedrun)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPlay)).EndInit();
@@ -870,15 +880,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbControls)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbSteam)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbArrow)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbSteamExeText)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbSteamExe)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbSave)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMute)).EndInit();
             this.ResumeLayout(false);

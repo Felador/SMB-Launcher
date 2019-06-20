@@ -8,4 +8,9 @@ C:\Users\tomna\Documents\GitHub\SMB-Launcher\Project\SMBLauncherProject\obj\Debu
 C:\Users\tomna\Documents\GitHub\SMB-Launcher\Project\SMBLauncherProject\obj\Debug\SMB Launcher.csproj.CoreCompileInputs.cache
 C:\Users\tomna\Documents\GitHub\SMB-Launcher\Project\SMBLauncherProject\obj\Debug\SMB Launcher.exe
 C:\Users\tomna\Documents\GitHub\SMB-Launcher\Project\SMBLauncherProject\obj\Debug\SMB Launcher.pdb
+C:\Users\tomna\Documents\GitHub\SMB-Launcher\Project\SMBLauncherProject\bin\Debug\SMB Launcher.exe.manifest
+C:\Users\tomna\Documents\GitHub\SMB-Launcher\Project\SMBLauncherProject\bin\Debug\SMB Launcher.application
+C:\Users\tomna\Documents\GitHub\SMB-Launcher\Project\SMBLauncherProject\obj\Debug\SMB Launcher.TrustInfo.xml
+C:\Users\tomna\Documents\GitHub\SMB-Launcher\Project\SMBLauncherProject\obj\Debug\SMB Launcher.exe.manifest
+C:\Users\tomna\Documents\GitHub\SMB-Launcher\Project\SMBLauncherProject\obj\Debug\SMB Launcher.application
 C:\Users\tomna\Documents\GitHub\SMB-Launcher\Project\SMBLauncherProject\obj\Debug\SMB Launcher.csprojAssemblyReference.cache
