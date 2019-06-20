@@ -468,5 +468,10 @@ namespace SMBLauncherProject
         {
             Process.Start("https://www.speedrun.com/smb/");
         }
+
+        private void PbDiscord_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://discord.gg/6fWG3XK");
+        }
     }
 }

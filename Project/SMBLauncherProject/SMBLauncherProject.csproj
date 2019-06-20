@@ -152,5 +152,8 @@
   <ItemGroup>
     <None Include="Resources\coin1.wav" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\discord.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
