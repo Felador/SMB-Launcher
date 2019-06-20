@@ -464,7 +464,7 @@
             this.pLaunchOptions.Controls.Add(this.pictureBox9);
             this.pLaunchOptions.Location = new System.Drawing.Point(0, 226);
             this.pLaunchOptions.Name = "pLaunchOptions";
-            this.pLaunchOptions.Size = new System.Drawing.Size(777, 105);
+            this.pLaunchOptions.Size = new System.Drawing.Size(777, 108);
             this.pLaunchOptions.TabIndex = 10;
             this.pLaunchOptions.Visible = false;
             // 
@@ -492,7 +492,7 @@
             this.tbLivesplit.Name = "tbLivesplit";
             this.tbLivesplit.Size = new System.Drawing.Size(446, 36);
             this.tbLivesplit.TabIndex = 8;
-            this.tbLivesplit.Click += new System.EventHandler(this.TbLivesplit_TextChanged);
+            this.tbLivesplit.TextChanged += new System.EventHandler(this.TbLivesplit_TextChanged);
             // 
             // cbLivesplit
             // 
@@ -822,6 +822,7 @@
             // pbMute
             // 
             this.pbMute.BackColor = System.Drawing.Color.Black;
+            this.pbMute.BackgroundImage = global::SMBLauncherProject.Properties.Resources.speaker;
             this.pbMute.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pbMute.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbMute.Location = new System.Drawing.Point(47, 983);
@@ -851,7 +852,7 @@
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MainForm";
-            this.Text = "Form1";
+            this.Text = "SMB Launcher";
             this.pSteamLocation.ResumeLayout(false);
             this.pSteamLocation.PerformLayout();
             this.pControlsPc.ResumeLayout(false);

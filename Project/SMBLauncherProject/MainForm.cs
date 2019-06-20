@@ -85,7 +85,6 @@ namespace SMBLauncherProject
                 Console.WriteLine("Could not find the smb folder");
             }
 
-            cbUseAnalog.CheckedChanged += new EventHandler(CbUseAnalog_CheckedChanged);
 
             if (data.muted)
                 pbMute.BackgroundImage = Properties.Resources.speaker_muted;
@@ -98,6 +97,10 @@ namespace SMBLauncherProject
 
             cbLivesplit.Checked = data.openLivesplit;
             tbLivesplit.Text = data.livesplitLocation;
+
+            cbUseAnalog.CheckedChanged += new EventHandler(CbUseAnalog_CheckedChanged);
+            cbDeleteSaveData.CheckedChanged += new EventHandler(CbDeleteSaveData_CheckedChanged);
+            cbLivesplit.CheckedChanged += new EventHandler(CbLivesplit_CheckedChanged);
         }
 
         private bool AutoSearchForSteamFolder()

@@ -33,17 +33,21 @@ namespace SMBLauncherProject
 
         public void RunCheck()
         {
+            // step 1
             this.Invoke((MethodInvoker)delegate
             {
-                lblStatus.Text = "Checking for an internet connection...";
+                progressBar1.Value = 1 * (progressBar1.Maximum / 3);
+                lblStatus.Text = "STATUS: CHECKING FOR AN INTERNET CONNECTION...";
             });
 
             if (!Program.CheckForInternetConnection())
                 Close();
 
+            // step 2
             this.Invoke((MethodInvoker)delegate
             {
-                lblStatus.Text = "Internet connection found. Checking for a updates...";
+                progressBar1.Value = 2 * (progressBar1.Maximum / 3);
+                lblStatus.Text = "STATUS: INTERNET CONNECTION FOUND. CHECKING FOR ANY UPDATES...";
             });
 
             string url = "https://tomnaughton.net/projects/smbl/v2/";
@@ -58,9 +62,11 @@ namespace SMBLauncherProject
                     Console.WriteLine("Matches: " + matches.Count);
                     if (matches.Count > Program._ID)
                     {
+                        // step 3
                         this.Invoke((MethodInvoker)delegate
                         {
-                            lblStatus.Text = "New version found";
+                            progressBar1.Value = progressBar1.Maximum;
+                            lblStatus.Text = "STATUS: NEW VERSION FOUND";
                         });
 
                         if (MessageBox.Show("New version found. Download now?", "Update", MessageBoxButtons.YesNo) == DialogResult.Yes)
@@ -74,9 +80,11 @@ namespace SMBLauncherProject
                     }
                     else
                     {
+                        // step 3
                         this.Invoke((MethodInvoker)delegate
                         {
-                            lblStatus.Text = "No new version";
+                            progressBar1.Value = progressBar1.Maximum;
+                            lblStatus.Text = "STATUS: NO NEW VERSION";
                             Close();
                         });
                     }

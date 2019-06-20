@@ -28,11 +28,20 @@
 ## [0.0.0.0] - 2019-06-XX
 ### Added
 - MINOR Button that opens the SMB Discord.
+- MINOR Cfu form's progress bar shows overall progress.
 
 ### Changed
 - MINOR Check for internet connection moved to CheckForUpdatesForm.
 - MINOR Reduced image sizes to match control sizes.
+- MINOR Cfu form's appearance.
+- MINOR Title of each form.
+- MAJOR Assembly name to "SMB Launcher".
+- MINOR Cfu form launches in the middle of the screen.
+- MINOR LblStatus replaced by "Status:" label so is all displayed in the one label.
+- MINOR Removed the close button from cfu form.
+- MINOR Cfu form always on top.
 
 ### Fixed
 - PATCH Checking for updates is moved to a different thread - fixed CHUform not loading.
 - PATCH Removed default text from lblStatus.
+- PATCH Changing background image of mute button instead of the image.
