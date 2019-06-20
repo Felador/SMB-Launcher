@@ -39,7 +39,7 @@
 - MINOR Cfu form launches in the middle of the screen.
 - MINOR LblStatus replaced by "Status:" label so is all displayed in the one label.
 - MINOR Removed the close button from cfu form.
-- MINOR Cfu form always on top.
+- MINOR Faster method of checking for an internet connection.
 
 ### Fixed
 - PATCH Checking for updates is moved to a different thread - fixed CHUform not loading.

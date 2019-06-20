@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
+using System.Net.NetworkInformation;
+using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -22,16 +24,10 @@ namespace SMBLauncherProject
         }
         public static bool CheckForInternetConnection()
         {
-            try
-            {
-                using (var client = new WebClient())
-                using (client.OpenRead("http://clients3.google.com/generate_204"))
-                    return true;
-            }
-            catch
-            {
-                return false;
-            }
+            Ping pingSender = new Ping();
+            PingReply reply = pingSender.Send("8.8.8.8", 1000);
+
+            return reply.Status == IPStatus.Success ? true : false;
         }
     }
 }

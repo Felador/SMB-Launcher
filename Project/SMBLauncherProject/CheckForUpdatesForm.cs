@@ -41,7 +41,10 @@ namespace SMBLauncherProject
             });
 
             if (!Program.CheckForInternetConnection())
-                Close();
+            {
+                this.Invoke((MethodInvoker)delegate { Close(); });
+                return;
+            }
 
             // step 2
             this.Invoke((MethodInvoker)delegate
@@ -76,7 +79,10 @@ namespace SMBLauncherProject
                             startDownload();
                         }
                         else
+                        {
                             this.Invoke((MethodInvoker)delegate { Close(); });
+                            return;
+                        }
                     }
                     else
                     {
@@ -86,6 +92,7 @@ namespace SMBLauncherProject
                             progressBar1.Value = progressBar1.Maximum;
                             lblStatus.Text = "STATUS: NO NEW VERSION";
                             Close();
+                            return;
                         });
                     }
                 }
