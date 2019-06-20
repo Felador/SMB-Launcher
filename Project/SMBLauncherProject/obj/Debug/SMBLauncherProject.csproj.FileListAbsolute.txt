@@ -1,0 +1,11 @@
+C:\Users\tomna\Documents\GitHub\SMB-Launcher\Project\SMBLauncherProject\bin\Debug\SMBLauncherProject.exe.config
+C:\Users\tomna\Documents\GitHub\SMB-Launcher\Project\SMBLauncherProject\bin\Debug\SMBLauncherProject.exe
+C:\Users\tomna\Documents\GitHub\SMB-Launcher\Project\SMBLauncherProject\bin\Debug\SMBLauncherProject.pdb
+C:\Users\tomna\Documents\GitHub\SMB-Launcher\Project\SMBLauncherProject\obj\Debug\SMBLauncherProject.csprojAssemblyReference.cache
+C:\Users\tomna\Documents\GitHub\SMB-Launcher\Project\SMBLauncherProject\obj\Debug\SMBLauncherProject.CheckForUpdatesForm.resources
+C:\Users\tomna\Documents\GitHub\SMB-Launcher\Project\SMBLauncherProject\obj\Debug\SMBLauncherProject.MainForm.resources
+C:\Users\tomna\Documents\GitHub\SMB-Launcher\Project\SMBLauncherProject\obj\Debug\SMBLauncherProject.Properties.Resources.resources
+C:\Users\tomna\Documents\GitHub\SMB-Launcher\Project\SMBLauncherProject\obj\Debug\SMBLauncherProject.csproj.GenerateResource.cache
+C:\Users\tomna\Documents\GitHub\SMB-Launcher\Project\SMBLauncherProject\obj\Debug\SMBLauncherProject.csproj.CoreCompileInputs.cache
+C:\Users\tomna\Documents\GitHub\SMB-Launcher\Project\SMBLauncherProject\obj\Debug\SMBLauncherProject.exe
+C:\Users\tomna\Documents\GitHub\SMB-Launcher\Project\SMBLauncherProject\obj\Debug\SMBLauncherProject.pdb
