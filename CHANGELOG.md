@@ -27,6 +27,7 @@
 
 ## [0.0.0.0] - 2019-06-XX
 ### Added
+- MINOR Button that opens the SMB Discord.
 
 ### Changed
 - MINOR Check for internet connection moved to CheckForUpdatesForm.
