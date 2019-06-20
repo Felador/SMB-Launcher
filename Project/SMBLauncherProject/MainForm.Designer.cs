@@ -57,7 +57,6 @@
             this.pbSpeedrun = new System.Windows.Forms.PictureBox();
             this.pbPlay = new System.Windows.Forms.PictureBox();
             this.pbLaunchOptions = new System.Windows.Forms.PictureBox();
-            this.pbMute = new System.Windows.Forms.PictureBox();
             this.pbPatreon = new System.Windows.Forms.PictureBox();
             this.pbControls = new System.Windows.Forms.PictureBox();
             this.pbSteam = new System.Windows.Forms.PictureBox();
@@ -72,6 +71,7 @@
             this.pbSteamExe = new System.Windows.Forms.PictureBox();
             this.pbSave = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pbMute = new System.Windows.Forms.PictureBox();
             this.pSteamLocation.SuspendLayout();
             this.pControlsPc.SuspendLayout();
             this.pSettings.SuspendLayout();
@@ -82,7 +82,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbSpeedrun)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPlay)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLaunchOptions)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbMute)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPatreon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbControls)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbSteam)).BeginInit();
@@ -97,6 +96,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbSteamExe)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbSave)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMute)).BeginInit();
             this.SuspendLayout();
             // 
             // pSteamLocation
@@ -657,19 +657,6 @@
             this.pbLaunchOptions.MouseEnter += new System.EventHandler(this.MenuButton_MouseEnter);
             this.pbLaunchOptions.MouseLeave += new System.EventHandler(this.MenuButton_MouseLeave);
             // 
-            // pbMute
-            // 
-            this.pbMute.BackColor = System.Drawing.Color.Black;
-            this.pbMute.BackgroundImage = global::SMBLauncherProject.Properties.Resources.speaker;
-            this.pbMute.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pbMute.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbMute.Location = new System.Drawing.Point(47, 983);
-            this.pbMute.Name = "pbMute";
-            this.pbMute.Size = new System.Drawing.Size(36, 36);
-            this.pbMute.TabIndex = 19;
-            this.pbMute.TabStop = false;
-            this.pbMute.Click += new System.EventHandler(this.ToggleMute);
-            // 
             // pbPatreon
             // 
             this.pbPatreon.BackColor = System.Drawing.Color.Black;
@@ -832,6 +819,18 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PictureBox1_MouseDown);
             // 
+            // pbMute
+            // 
+            this.pbMute.BackColor = System.Drawing.Color.Black;
+            this.pbMute.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbMute.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbMute.Location = new System.Drawing.Point(47, 983);
+            this.pbMute.Name = "pbMute";
+            this.pbMute.Size = new System.Drawing.Size(36, 36);
+            this.pbMute.TabIndex = 19;
+            this.pbMute.TabStop = false;
+            this.pbMute.Click += new System.EventHandler(this.ToggleMute);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -866,7 +865,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbSpeedrun)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPlay)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLaunchOptions)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbMute)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPatreon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbControls)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbSteam)).EndInit();
@@ -881,6 +879,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbSteamExe)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbSave)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMute)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -905,7 +904,6 @@
         private System.Windows.Forms.PictureBox pbSave;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pbLaunchOptions;
-        private System.Windows.Forms.PictureBox pbMute;
         private System.Windows.Forms.PictureBox pbPatreon;
         private System.Windows.Forms.Label lbExit;
         private System.Windows.Forms.PictureBox pbControls;
@@ -931,6 +929,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pbSpeedrun;
         private System.Windows.Forms.PictureBox pbDiscord;
+        private System.Windows.Forms.PictureBox pbMute;
     }
 }
 

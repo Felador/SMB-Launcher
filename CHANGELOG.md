@@ -31,6 +31,7 @@
 
 ### Changed
 - MINOR Check for internet connection moved to CheckForUpdatesForm.
+- MINOR Reduced image sizes to match control sizes.
 
 ### Fixed
 - PATCH Checking for updates is moved to a different thread - fixed CHUform not loading.

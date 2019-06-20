@@ -88,9 +88,9 @@ namespace SMBLauncherProject
             cbUseAnalog.CheckedChanged += new EventHandler(CbUseAnalog_CheckedChanged);
 
             if (data.muted)
-                pbMute.Image = Properties.Resources.speaker_muted;
+                pbMute.BackgroundImage = Properties.Resources.speaker_muted;
             else
-                pbMute.Image = Properties.Resources.speaker;
+                pbMute.BackgroundImage = Properties.Resources.speaker;
 
             cbDeleteSaveData.Checked = data.deleteDataOnPlay;
 
@@ -420,9 +420,9 @@ namespace SMBLauncherProject
             data.muted = !data.muted;
 
             if (data.muted)
-                pbMute.Image = Properties.Resources.speaker_muted;
+                pbMute.BackgroundImage = Properties.Resources.speaker_muted;
             else
-                pbMute.Image = Properties.Resources.speaker;
+                pbMute.BackgroundImage = Properties.Resources.speaker;
         }
 
         private void CbDeleteSaveData_CheckedChanged(object sender, EventArgs e)
