@@ -72,6 +72,7 @@
             this.pbArrow = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pbMute = new System.Windows.Forms.PictureBox();
+            this.lblMinimise = new System.Windows.Forms.Label();
             this.pSteamLocation.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbSteamExeText)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbSteamExe)).BeginInit();
@@ -832,11 +833,26 @@
             this.pbMute.TabStop = false;
             this.pbMute.Click += new System.EventHandler(this.ToggleMute);
             // 
+            // lblMinimise
+            // 
+            this.lblMinimise.BackColor = System.Drawing.Color.Black;
+            this.lblMinimise.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblMinimise.Font = new System.Drawing.Font("Consolas", 16F, System.Drawing.FontStyle.Bold);
+            this.lblMinimise.ForeColor = System.Drawing.Color.White;
+            this.lblMinimise.Location = new System.Drawing.Point(1750, 0);
+            this.lblMinimise.Name = "lblMinimise";
+            this.lblMinimise.Size = new System.Drawing.Size(36, 36);
+            this.lblMinimise.TabIndex = 24;
+            this.lblMinimise.Text = "_";
+            this.lblMinimise.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.lblMinimise.Click += new System.EventHandler(this.LblMinimise_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1828, 1024);
+            this.Controls.Add(this.lblMinimise);
             this.Controls.Add(this.pbDiscord);
             this.Controls.Add(this.pbSpeedrun);
             this.Controls.Add(this.pbPlay);
@@ -853,6 +869,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SMB Launcher";
             this.pSteamLocation.ResumeLayout(false);
             this.pSteamLocation.PerformLayout();
@@ -932,6 +949,7 @@
         private System.Windows.Forms.PictureBox pbSpeedrun;
         private System.Windows.Forms.PictureBox pbDiscord;
         private System.Windows.Forms.PictureBox pbMute;
+        private System.Windows.Forms.Label lblMinimise;
     }
 }
 

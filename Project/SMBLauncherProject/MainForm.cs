@@ -342,6 +342,8 @@ namespace SMBLauncherProject
             process.StartInfo.FileName = steamExe;
             process.StartInfo.Arguments = "-applaunch 40800";
             process.Start();
+
+            Close();
         }
 
         private void Save(object sender, EventArgs e)
@@ -475,6 +477,11 @@ namespace SMBLauncherProject
         private void PbDiscord_Click(object sender, EventArgs e)
         {
             Process.Start("https://discord.gg/6fWG3XK");
+        }
+
+        private void LblMinimise_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }

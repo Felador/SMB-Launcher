@@ -47,3 +47,13 @@
 - PATCH Checking for updates is moved to a different thread - fixed CHUform not loading.
 - PATCH Removed default text from lblStatus.
 - PATCH Changing background image of mute button instead of the image.
+
+## IN PROGRESS
+### Added
+- MINOR Minimise button.
+- MINOR Closes when SMB is launched.
+
+### Changed
+- MINOR MainForm opens in the middle of the screen.
+
+### Fixed
