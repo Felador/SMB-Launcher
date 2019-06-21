@@ -13,5 +13,4 @@ C:\Users\tomna\Documents\GitHub\SMB-Launcher\Project\SMBLauncherProject\bin\Debu
 C:\Users\tomna\Documents\GitHub\SMB-Launcher\Project\SMBLauncherProject\obj\Debug\SMB Launcher.TrustInfo.xml
 C:\Users\tomna\Documents\GitHub\SMB-Launcher\Project\SMBLauncherProject\obj\Debug\SMB Launcher.exe.manifest
 C:\Users\tomna\Documents\GitHub\SMB-Launcher\Project\SMBLauncherProject\obj\Debug\SMB Launcher.application
-C:\Users\tomna\Documents\GitHub\SMB-Launcher\Project\SMBLauncherProject\obj\Debug\SMB Launcher.csprojAssemblyReference.cache
 C:\Users\tomna\Documents\GitHub\SMB-Launcher\Project\SMBLauncherProject\obj\Debug\SMBLauncherProject.LaunchProgramForm.resources

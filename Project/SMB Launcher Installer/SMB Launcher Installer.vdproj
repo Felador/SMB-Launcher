@@ -34,13 +34,13 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_51CCA9F81FEBCEE5D4CDE9ABFE7D635D"
+        "OwnerKey" = "8:_7BAC53DAA4B14185BFE4DD655DB4E8D1"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_7BAC53DAA4B14185BFE4DD655DB4E8D1"
+        "OwnerKey" = "8:_51CCA9F81FEBCEE5D4CDE9ABFE7D635D"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -68,6 +68,14 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.6.1"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.6.1 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.6.1"
+                    }
+                }
             }
         }
         "Release"
@@ -92,6 +100,14 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.6.1"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.6.1 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.6.1"
+                    }
+                }
             }
         }
     }
@@ -149,6 +165,11 @@
             "AssemblyAsmDisplayName" = "8:System.Net.Http, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
                 "ScatterAssemblies"
                 {
+                    "_51CCA9F81FEBCEE5D4CDE9ABFE7D635D"
+                    {
+                    "Name" = "8:System.Net.Http.dll"
+                    "Attributes" = "3:512"
+                    }
                 }
             "SourcePath" = "8:System.Net.Http.dll"
             "TargetName" = "8:"
@@ -224,15 +245,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:SMB Launcher"
-        "ProductCode" = "8:{6F0C4FFB-7F30-477A-B675-B83B35743DA2}"
-        "PackageCode" = "8:{30E939DF-82C1-497A-8BFA-8EEA352B0B31}"
-        "UpgradeCode" = "8:{AC37955A-1DD9-4492-A327-D030BCF39BB2}"
+        "ProductCode" = "8:{384144AB-37B6-419B-819F-6A1111AB9A38}"
+        "PackageCode" = "8:{14C39F7D-ED62-4B2A-90D4-506B22ACCA09}"
+        "UpgradeCode" = "8:{04A9A9D6-AC1F-48BF-B6C7-15CDDE810CE5}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:TRUE"
-        "ProductVersion" = "8:6.0.0"
+        "ProductVersion" = "8:7.0.0"
         "Manufacturer" = "8:Felasoft"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"

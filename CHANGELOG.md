@@ -48,7 +48,7 @@
 - PATCH Removed default text from lblStatus.
 - PATCH Changing background image of mute button instead of the image.
 
-## IN PROGRESS
+## [2.29.0.4] - 2019-06-21
 ### Added
 - MINOR Minimise button.
 - MINOR Closes when SMB is launched.
