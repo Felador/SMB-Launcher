@@ -53,6 +53,7 @@
 - MINOR Minimise button.
 - MINOR Closes when SMB is launched.
 - MINOR Text describing each combo box in the controls menu.
+- MINOR Devmode launch parameter option in launch options menu.
 
 ### Changed
 - MINOR MainForm opens in the middle of the screen.

@@ -83,6 +83,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.cbDevmode = new System.Windows.Forms.CheckBox();
             this.pSteamLocation.SuspendLayout();
             this.pControlsPc.SuspendLayout();
             this.pSettings.SuspendLayout();
@@ -473,6 +474,7 @@
             // 
             // pLaunchOptions
             // 
+            this.pLaunchOptions.Controls.Add(this.cbDevmode);
             this.pLaunchOptions.Controls.Add(this.lblLaunchProgramsRemove);
             this.pLaunchOptions.Controls.Add(this.lblLaunchProgramsAdd);
             this.pLaunchOptions.Controls.Add(this.lvLaunchPrograms);
@@ -480,9 +482,9 @@
             this.pLaunchOptions.Controls.Add(this.cbDeleteSaveData);
             this.pLaunchOptions.Controls.Add(this.pictureBox8);
             this.pLaunchOptions.Controls.Add(this.pictureBox9);
-            this.pLaunchOptions.Location = new System.Drawing.Point(758, 268);
+            this.pLaunchOptions.Location = new System.Drawing.Point(3, 3);
             this.pLaunchOptions.Name = "pLaunchOptions";
-            this.pLaunchOptions.Size = new System.Drawing.Size(777, 103);
+            this.pLaunchOptions.Size = new System.Drawing.Size(777, 516);
             this.pLaunchOptions.TabIndex = 10;
             this.pLaunchOptions.Visible = false;
             this.pLaunchOptions.Resize += new System.EventHandler(this.PLaunchOptions_Resize);
@@ -530,10 +532,10 @@
             this.lvLaunchPrograms.FullRowSelect = true;
             this.lvLaunchPrograms.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.lvLaunchPrograms.HideSelection = false;
-            this.lvLaunchPrograms.Location = new System.Drawing.Point(5, 161);
+            this.lvLaunchPrograms.Location = new System.Drawing.Point(5, 214);
             this.lvLaunchPrograms.MultiSelect = false;
             this.lvLaunchPrograms.Name = "lvLaunchPrograms";
-            this.lvLaunchPrograms.Size = new System.Drawing.Size(763, 296);
+            this.lvLaunchPrograms.Size = new System.Drawing.Size(763, 243);
             this.lvLaunchPrograms.TabIndex = 11;
             this.lvLaunchPrograms.UseCompatibleStateImageBehavior = false;
             this.lvLaunchPrograms.View = System.Windows.Forms.View.Details;
@@ -982,6 +984,19 @@
             this.label10.TabIndex = 10;
             this.label10.Text = "Special";
             // 
+            // cbDevmode
+            // 
+            this.cbDevmode.AutoSize = true;
+            this.cbDevmode.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold);
+            this.cbDevmode.ForeColor = System.Drawing.Color.White;
+            this.cbDevmode.Location = new System.Drawing.Point(5, 161);
+            this.cbDevmode.Name = "cbDevmode";
+            this.cbDevmode.Size = new System.Drawing.Size(129, 32);
+            this.cbDevmode.TabIndex = 20;
+            this.cbDevmode.Text = "DEVMODE";
+            this.cbDevmode.UseVisualStyleBackColor = true;
+            this.cbDevmode.CheckedChanged += new System.EventHandler(this.CbDevmode_CheckedChanged);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -1096,6 +1111,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.CheckBox cbDevmode;
     }
 }
 

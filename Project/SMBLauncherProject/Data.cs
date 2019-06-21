@@ -13,6 +13,7 @@ namespace SMBLauncherProject
         public bool muted = false;
 
         public bool deleteDataOnPlay = false;
+        public bool devmode = false;
 
         public List<LaunchProgram> launchPrograms;
 

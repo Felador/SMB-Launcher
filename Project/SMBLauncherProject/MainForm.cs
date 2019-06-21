@@ -92,6 +92,7 @@ namespace SMBLauncherProject
                 pbMute.BackgroundImage = Properties.Resources.speaker;
 
             cbDeleteSaveData.Checked = data.deleteDataOnPlay;
+            cbDevmode.Checked = data.devmode;
 
             tbSteamLocation.Text = data.steamLocation;
 
@@ -135,8 +136,6 @@ namespace SMBLauncherProject
         private Data data = new Data();
 
         private string steamExe { get { return data.steamLocation + @"\Steam.exe"; } }
-
-        private string steamLibraryFoldersFile { get { return data.steamLocation + @"\steamapps\libraryfolders.vdf"; } }
 
         public static string GetSmbLocation(string steamLocation)
         {
@@ -346,6 +345,10 @@ namespace SMBLauncherProject
 
             process.StartInfo.FileName = steamExe;
             process.StartInfo.Arguments = "-applaunch 40800";
+
+            if (data.devmode)
+                process.StartInfo.Arguments += " -devmode";
+
             process.Start();
 
             Close();
@@ -555,6 +558,11 @@ namespace SMBLauncherProject
 
             if (lvLaunchPrograms.SelectedItems.Count != 0)
                 RemoveLaunchProgram();
+        }
+
+        private void CbDevmode_CheckedChanged(object sender, EventArgs e)
+        {
+            data.devmode = cbDevmode.Checked;
         }
     }
 }
