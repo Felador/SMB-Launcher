@@ -57,3 +57,4 @@
 - MINOR MainForm opens in the middle of the screen.
 
 ### Fixed
+- reimplemented autosearch.

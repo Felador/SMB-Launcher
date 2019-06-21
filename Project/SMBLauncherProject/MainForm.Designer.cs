@@ -45,9 +45,11 @@
             this.lbExit = new System.Windows.Forms.Label();
             this.pSettings = new System.Windows.Forms.Panel();
             this.pLaunchOptions = new System.Windows.Forms.Panel();
-            this.lblLivesplitDownload = new System.Windows.Forms.Label();
-            this.tbLivesplit = new System.Windows.Forms.TextBox();
-            this.cbLivesplit = new System.Windows.Forms.CheckBox();
+            this.lblLaunchProgramsRemove = new System.Windows.Forms.Label();
+            this.lblLaunchProgramsAdd = new System.Windows.Forms.Label();
+            this.lvLaunchPrograms = new System.Windows.Forms.ListView();
+            this.chName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.chLocation = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label2 = new System.Windows.Forms.Label();
             this.cbDeleteSaveData = new System.Windows.Forms.CheckBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
@@ -62,17 +64,17 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pbSave = new System.Windows.Forms.PictureBox();
+            this.lblMinimise = new System.Windows.Forms.Label();
             this.pbDiscord = new System.Windows.Forms.PictureBox();
             this.pbSpeedrun = new System.Windows.Forms.PictureBox();
             this.pbPlay = new System.Windows.Forms.PictureBox();
             this.pbLaunchOptions = new System.Windows.Forms.PictureBox();
+            this.pbMute = new System.Windows.Forms.PictureBox();
             this.pbPatreon = new System.Windows.Forms.PictureBox();
             this.pbControls = new System.Windows.Forms.PictureBox();
             this.pbSteam = new System.Windows.Forms.PictureBox();
             this.pbArrow = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pbMute = new System.Windows.Forms.PictureBox();
-            this.lblMinimise = new System.Windows.Forms.Label();
             this.pSteamLocation.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbSteamExeText)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbSteamExe)).BeginInit();
@@ -92,12 +94,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbSpeedrun)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPlay)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLaunchOptions)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMute)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPatreon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbControls)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbSteam)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbArrow)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbMute)).BeginInit();
             this.SuspendLayout();
             // 
             // pSteamLocation
@@ -106,9 +108,9 @@
             this.pSteamLocation.Controls.Add(this.pbSteamExeText);
             this.pSteamLocation.Controls.Add(this.tbSteamLocation);
             this.pSteamLocation.Controls.Add(this.pbSteamExe);
-            this.pSteamLocation.Location = new System.Drawing.Point(3, 3);
+            this.pSteamLocation.Location = new System.Drawing.Point(758, 3);
             this.pSteamLocation.Name = "pSteamLocation";
-            this.pSteamLocation.Size = new System.Drawing.Size(774, 109);
+            this.pSteamLocation.Size = new System.Drawing.Size(774, 103);
             this.pSteamLocation.TabIndex = 8;
             this.pSteamLocation.Visible = false;
             // 
@@ -477,56 +479,81 @@
             // 
             // pLaunchOptions
             // 
-            this.pLaunchOptions.Controls.Add(this.lblLivesplitDownload);
-            this.pLaunchOptions.Controls.Add(this.tbLivesplit);
-            this.pLaunchOptions.Controls.Add(this.cbLivesplit);
+            this.pLaunchOptions.Controls.Add(this.lblLaunchProgramsRemove);
+            this.pLaunchOptions.Controls.Add(this.lblLaunchProgramsAdd);
+            this.pLaunchOptions.Controls.Add(this.lvLaunchPrograms);
             this.pLaunchOptions.Controls.Add(this.label2);
             this.pLaunchOptions.Controls.Add(this.cbDeleteSaveData);
             this.pLaunchOptions.Controls.Add(this.pictureBox8);
             this.pLaunchOptions.Controls.Add(this.pictureBox9);
-            this.pLaunchOptions.Location = new System.Drawing.Point(0, 226);
+            this.pLaunchOptions.Location = new System.Drawing.Point(3, 0);
             this.pLaunchOptions.Name = "pLaunchOptions";
-            this.pLaunchOptions.Size = new System.Drawing.Size(777, 108);
+            this.pLaunchOptions.Size = new System.Drawing.Size(777, 519);
             this.pLaunchOptions.TabIndex = 10;
             this.pLaunchOptions.Visible = false;
+            this.pLaunchOptions.Resize += new System.EventHandler(this.PLaunchOptions_Resize);
             // 
-            // lblLivesplitDownload
+            // lblLaunchProgramsRemove
             // 
-            this.lblLivesplitDownload.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblLivesplitDownload.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblLivesplitDownload.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold);
-            this.lblLivesplitDownload.ForeColor = System.Drawing.Color.White;
-            this.lblLivesplitDownload.Location = new System.Drawing.Point(618, 157);
-            this.lblLivesplitDownload.Name = "lblLivesplitDownload";
-            this.lblLivesplitDownload.Size = new System.Drawing.Size(142, 39);
-            this.lblLivesplitDownload.TabIndex = 9;
-            this.lblLivesplitDownload.Text = "DOWNLOAD";
-            this.lblLivesplitDownload.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblLivesplitDownload.Click += new System.EventHandler(this.LblLivesplitDownload_Click);
+            this.lblLaunchProgramsRemove.BackColor = System.Drawing.Color.Black;
+            this.lblLaunchProgramsRemove.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblLaunchProgramsRemove.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblLaunchProgramsRemove.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold);
+            this.lblLaunchProgramsRemove.ForeColor = System.Drawing.Color.White;
+            this.lblLaunchProgramsRemove.Location = new System.Drawing.Point(47, 460);
+            this.lblLaunchProgramsRemove.Name = "lblLaunchProgramsRemove";
+            this.lblLaunchProgramsRemove.Size = new System.Drawing.Size(36, 36);
+            this.lblLaunchProgramsRemove.TabIndex = 19;
+            this.lblLaunchProgramsRemove.Text = "-";
+            this.lblLaunchProgramsRemove.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblLaunchProgramsRemove.Click += new System.EventHandler(this.LblLaunchProgramsRemove_Click);
             // 
-            // tbLivesplit
+            // lblLaunchProgramsAdd
             // 
-            this.tbLivesplit.BackColor = System.Drawing.Color.Black;
-            this.tbLivesplit.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbLivesplit.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold);
-            this.tbLivesplit.ForeColor = System.Drawing.Color.White;
-            this.tbLivesplit.Location = new System.Drawing.Point(166, 157);
-            this.tbLivesplit.Name = "tbLivesplit";
-            this.tbLivesplit.Size = new System.Drawing.Size(446, 36);
-            this.tbLivesplit.TabIndex = 8;
-            this.tbLivesplit.TextChanged += new System.EventHandler(this.TbLivesplit_TextChanged);
+            this.lblLaunchProgramsAdd.BackColor = System.Drawing.Color.Black;
+            this.lblLaunchProgramsAdd.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblLaunchProgramsAdd.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblLaunchProgramsAdd.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold);
+            this.lblLaunchProgramsAdd.ForeColor = System.Drawing.Color.White;
+            this.lblLaunchProgramsAdd.Location = new System.Drawing.Point(5, 460);
+            this.lblLaunchProgramsAdd.Name = "lblLaunchProgramsAdd";
+            this.lblLaunchProgramsAdd.Size = new System.Drawing.Size(36, 36);
+            this.lblLaunchProgramsAdd.TabIndex = 18;
+            this.lblLaunchProgramsAdd.Text = "+";
+            this.lblLaunchProgramsAdd.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblLaunchProgramsAdd.Click += new System.EventHandler(this.LblLaunchProgramsAdd_Click);
             // 
-            // cbLivesplit
+            // lvLaunchPrograms
             // 
-            this.cbLivesplit.AutoSize = true;
-            this.cbLivesplit.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold);
-            this.cbLivesplit.ForeColor = System.Drawing.Color.White;
-            this.cbLivesplit.Location = new System.Drawing.Point(5, 161);
-            this.cbLivesplit.Name = "cbLivesplit";
-            this.cbLivesplit.Size = new System.Drawing.Size(155, 32);
-            this.cbLivesplit.TabIndex = 7;
-            this.cbLivesplit.Text = "Livesplit";
-            this.cbLivesplit.UseVisualStyleBackColor = true;
+            this.lvLaunchPrograms.BackColor = System.Drawing.Color.Black;
+            this.lvLaunchPrograms.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lvLaunchPrograms.CheckBoxes = true;
+            this.lvLaunchPrograms.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.chName,
+            this.chLocation});
+            this.lvLaunchPrograms.Font = new System.Drawing.Font("Consolas", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lvLaunchPrograms.ForeColor = System.Drawing.Color.White;
+            this.lvLaunchPrograms.FullRowSelect = true;
+            this.lvLaunchPrograms.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+            this.lvLaunchPrograms.HideSelection = false;
+            this.lvLaunchPrograms.Location = new System.Drawing.Point(5, 161);
+            this.lvLaunchPrograms.MultiSelect = false;
+            this.lvLaunchPrograms.Name = "lvLaunchPrograms";
+            this.lvLaunchPrograms.Size = new System.Drawing.Size(763, 296);
+            this.lvLaunchPrograms.TabIndex = 11;
+            this.lvLaunchPrograms.UseCompatibleStateImageBehavior = false;
+            this.lvLaunchPrograms.View = System.Windows.Forms.View.Details;
+            this.lvLaunchPrograms.KeyDown += new System.Windows.Forms.KeyEventHandler(this.LvLaunchPrograms_KeyDown);
+            // 
+            // chName
+            // 
+            this.chName.Text = "Name";
+            this.chName.Width = 163;
+            // 
+            // chLocation
+            // 
+            this.chLocation.Text = "Location";
+            this.chLocation.Width = 529;
             // 
             // label2
             // 
@@ -580,7 +607,7 @@
             this.pControls.Controls.Add(this.pictureBox2);
             this.pControls.Controls.Add(this.pictureBox3);
             this.pControls.Controls.Add(this.pControlsPc);
-            this.pControls.Location = new System.Drawing.Point(3, 118);
+            this.pControls.Location = new System.Drawing.Point(750, 121);
             this.pControls.Name = "pControls";
             this.pControls.Size = new System.Drawing.Size(774, 102);
             this.pControls.TabIndex = 9;
@@ -696,6 +723,20 @@
             this.pbSave.TabStop = false;
             this.pbSave.Click += new System.EventHandler(this.Save);
             // 
+            // lblMinimise
+            // 
+            this.lblMinimise.BackColor = System.Drawing.Color.Black;
+            this.lblMinimise.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblMinimise.Font = new System.Drawing.Font("Consolas", 16F, System.Drawing.FontStyle.Bold);
+            this.lblMinimise.ForeColor = System.Drawing.Color.White;
+            this.lblMinimise.Location = new System.Drawing.Point(1750, 0);
+            this.lblMinimise.Name = "lblMinimise";
+            this.lblMinimise.Size = new System.Drawing.Size(36, 36);
+            this.lblMinimise.TabIndex = 24;
+            this.lblMinimise.Text = "_";
+            this.lblMinimise.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.lblMinimise.Click += new System.EventHandler(this.LblMinimise_Click);
+            // 
             // pbDiscord
             // 
             this.pbDiscord.BackColor = System.Drawing.Color.Black;
@@ -751,6 +792,19 @@
             this.pbLaunchOptions.Click += new System.EventHandler(this.ShowSettingsPanel_LaunchOptions);
             this.pbLaunchOptions.MouseEnter += new System.EventHandler(this.MenuButton_MouseEnter);
             this.pbLaunchOptions.MouseLeave += new System.EventHandler(this.MenuButton_MouseLeave);
+            // 
+            // pbMute
+            // 
+            this.pbMute.BackColor = System.Drawing.Color.Black;
+            this.pbMute.BackgroundImage = global::SMBLauncherProject.Properties.Resources.speaker;
+            this.pbMute.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbMute.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbMute.Location = new System.Drawing.Point(47, 983);
+            this.pbMute.Name = "pbMute";
+            this.pbMute.Size = new System.Drawing.Size(36, 36);
+            this.pbMute.TabIndex = 19;
+            this.pbMute.TabStop = false;
+            this.pbMute.Click += new System.EventHandler(this.ToggleMute);
             // 
             // pbPatreon
             // 
@@ -820,33 +874,6 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PictureBox1_MouseDown);
             // 
-            // pbMute
-            // 
-            this.pbMute.BackColor = System.Drawing.Color.Black;
-            this.pbMute.BackgroundImage = global::SMBLauncherProject.Properties.Resources.speaker;
-            this.pbMute.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pbMute.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbMute.Location = new System.Drawing.Point(47, 983);
-            this.pbMute.Name = "pbMute";
-            this.pbMute.Size = new System.Drawing.Size(36, 36);
-            this.pbMute.TabIndex = 19;
-            this.pbMute.TabStop = false;
-            this.pbMute.Click += new System.EventHandler(this.ToggleMute);
-            // 
-            // lblMinimise
-            // 
-            this.lblMinimise.BackColor = System.Drawing.Color.Black;
-            this.lblMinimise.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblMinimise.Font = new System.Drawing.Font("Consolas", 16F, System.Drawing.FontStyle.Bold);
-            this.lblMinimise.ForeColor = System.Drawing.Color.White;
-            this.lblMinimise.Location = new System.Drawing.Point(1750, 0);
-            this.lblMinimise.Name = "lblMinimise";
-            this.lblMinimise.Size = new System.Drawing.Size(36, 36);
-            this.lblMinimise.TabIndex = 24;
-            this.lblMinimise.Text = "_";
-            this.lblMinimise.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            this.lblMinimise.Click += new System.EventHandler(this.LblMinimise_Click);
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -893,12 +920,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbSpeedrun)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPlay)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLaunchOptions)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMute)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPatreon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbControls)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbSteam)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbArrow)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbMute)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -930,9 +957,6 @@
         private System.Windows.Forms.PictureBox pbArrow;
         private System.Windows.Forms.Panel pSettings;
         private System.Windows.Forms.Panel pLaunchOptions;
-        private System.Windows.Forms.Label lblLivesplitDownload;
-        private System.Windows.Forms.TextBox tbLivesplit;
-        private System.Windows.Forms.CheckBox cbLivesplit;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.CheckBox cbDeleteSaveData;
         private System.Windows.Forms.PictureBox pictureBox8;
@@ -950,6 +974,11 @@
         private System.Windows.Forms.PictureBox pbDiscord;
         private System.Windows.Forms.PictureBox pbMute;
         private System.Windows.Forms.Label lblMinimise;
+        private System.Windows.Forms.ListView lvLaunchPrograms;
+        private System.Windows.Forms.ColumnHeader chName;
+        private System.Windows.Forms.ColumnHeader chLocation;
+        private System.Windows.Forms.Label lblLaunchProgramsAdd;
+        private System.Windows.Forms.Label lblLaunchProgramsRemove;
     }
 }
 

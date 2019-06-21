@@ -100,6 +100,13 @@
     </Compile>
     <Compile Include="Data.cs" />
     <Compile Include="KnownFolders.cs" />
+    <Compile Include="LaunchProgram.cs" />
+    <Compile Include="LaunchProgramForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LaunchProgramForm.Designer.cs">
+      <DependentUpon>LaunchProgramForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +118,9 @@
     <Compile Include="SaveLoad.cs" />
     <EmbeddedResource Include="CheckForUpdatesForm.resx">
       <DependentUpon>CheckForUpdatesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LaunchProgramForm.resx">
+      <DependentUpon>LaunchProgramForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
@@ -204,6 +214,7 @@
     <None Include="Resources\discord.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\hurt1.wav" />
     <Content Include="smblicon.ico" />
   </ItemGroup>
   <ItemGroup>

@@ -44,7 +44,7 @@ namespace SMBLauncherProject
                 }
             }
 
-            Size size = new Size(pSettings.Width, pSettings.Height - 100);
+            Size size = new Size(pSettings.Width, pSettings.Height - 50);
 
             pSteamLocation.Location = new Point(3, 3);
             pSteamLocation.Size = size;
@@ -95,12 +95,17 @@ namespace SMBLauncherProject
 
             tbSteamLocation.Text = data.steamLocation;
 
-            cbLivesplit.Checked = data.openLivesplit;
-            tbLivesplit.Text = data.livesplitLocation;
+            if (data.launchPrograms == null)
+                data.launchPrograms = new List<LaunchProgram>();
+
+            foreach (LaunchProgram lp in data.launchPrograms)
+                lvLaunchPrograms.Items.Add(LaunchProgram.GetLVI(lp));
+
+            for (int i = 0; i < data.launchPrograms.Count; i++)
+                lvLaunchPrograms.Items[i].Checked = data.launchPrograms[i].enabled;
 
             cbUseAnalog.CheckedChanged += new EventHandler(CbUseAnalog_CheckedChanged);
             cbDeleteSaveData.CheckedChanged += new EventHandler(CbDeleteSaveData_CheckedChanged);
-            cbLivesplit.CheckedChanged += new EventHandler(CbLivesplit_CheckedChanged);
         }
 
         private bool AutoSearchForSteamFolder()
@@ -298,19 +303,6 @@ namespace SMBLauncherProject
                 snd.Play();
             }
 
-            if (data.openLivesplit)
-            {
-                try
-                {
-                    Process.Start(data.livesplitLocation);
-                }
-                catch
-                {
-                    if (MessageBox.Show("Unable to open Livesplit. Continue?", "Error", MessageBoxButtons.YesNo) == DialogResult.No)
-                        return;
-                }
-            }
-
             if (!Directory.Exists(data.steamLocation) || !File.Exists(steamExe))
             {
                 MessageBox.Show("Steam not found! Please configure your steam location so that the entered value is the folder containing the steam EXE. Please leave the EXE file OUT of your input.", "Error");
@@ -331,6 +323,19 @@ namespace SMBLauncherProject
                 {
                     MessageBox.Show("Unable to delete save data. Please ensure that the file is not protected. Try running SMB Launcher as administrator.", "Error");
                     return;
+                }
+            }
+
+            foreach (LaunchProgram lp in data.launchPrograms)
+            {
+                try
+                {
+                    if (lp.enabled)
+                        Process.Start(lp.location);
+                }
+                catch
+                {
+                    Console.WriteLine("Unable to launch " + lp.location);
                 }
             }
 
@@ -367,6 +372,11 @@ namespace SMBLauncherProject
             data.ctrls.gamepad.useAnalog = cbUseAnalog.Checked;
 
             SaveLoad.WriteControlsToGameFile(data);
+
+            for(int i = 0; i < lvLaunchPrograms.Items.Count; i++)
+            {
+                data.launchPrograms[i].enabled = lvLaunchPrograms.Items[i].Checked;
+            }
 
             HideSettingsPanel();
 
@@ -412,7 +422,12 @@ namespace SMBLauncherProject
 
         private void LblAutoSearch_Click(object sender, EventArgs e)
         {
+            bool result = AutoSearchForSteamFolder();
 
+            if (result)
+                tbSteamLocation.Text = data.steamLocation;
+            else
+                MessageBox.Show("Unable to find Steam. You need to install Steam or manually input it's location.", "Error", MessageBoxButtons.OK);
         }
 
         private void PbPatreon_Click(object sender, EventArgs e)
@@ -459,16 +474,6 @@ namespace SMBLauncherProject
             Process.Start("http://livesplit.org/downloads/");
         }
 
-        private void CbLivesplit_CheckedChanged(object sender, EventArgs e)
-        {
-            data.openLivesplit = cbLivesplit.Checked;
-        }
-
-        private void TbLivesplit_TextChanged(object sender, EventArgs e)
-        {
-            data.livesplitLocation = tbLivesplit.Text;
-        }
-
         private void PbSpeedrun_Click(object sender, EventArgs e)
         {
             Process.Start("https://www.speedrun.com/smb/");
@@ -482,6 +487,74 @@ namespace SMBLauncherProject
         private void LblMinimise_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void PLaunchOptions_Resize(object sender, EventArgs e)
+        {
+            chName.Width = lvLaunchPrograms.Width / 3;
+            chLocation.Width = (lvLaunchPrograms.Width / 3) * 2;
+        }
+
+        private void LblLaunchProgramsAdd_Click(object sender, EventArgs e)
+        {
+            if (!data.muted)
+            {
+                Stream str = Properties.Resources.blip2;
+                System.Media.SoundPlayer snd = new System.Media.SoundPlayer(str);
+                snd.Play();
+            }
+
+            LaunchProgramForm lpForm = new LaunchProgramForm();
+
+            if(lpForm.ShowDialog() == DialogResult.OK)
+            {
+                if (data.launchPrograms == null)
+                    data.launchPrograms = new List<LaunchProgram>();
+
+                data.launchPrograms.Add(lpForm.launchProgram);
+
+                lvLaunchPrograms.Items.Clear();
+
+                foreach(LaunchProgram lp in data.launchPrograms)
+                    lvLaunchPrograms.Items.Add(LaunchProgram.GetLVI(lp));
+            }
+        }
+
+        private void RemoveLaunchProgram()
+        {
+            if (!data.muted)
+            {
+                Stream str = Properties.Resources.hurt1;
+                System.Media.SoundPlayer snd = new System.Media.SoundPlayer(str);
+                snd.Play();
+            }
+
+            int index = lvLaunchPrograms.SelectedIndices[0];
+
+            data.launchPrograms.RemoveAt(index);
+            lvLaunchPrograms.Items.RemoveAt(index);
+        }
+
+        private void LvLaunchPrograms_KeyDown(object sender, KeyEventArgs e)
+        {
+
+            if (e.KeyCode != Keys.Delete || lvLaunchPrograms.SelectedItems.Count == 0)
+                return;
+
+            RemoveLaunchProgram();
+        }
+
+        private void LblLaunchProgramsRemove_Click(object sender, EventArgs e)
+        {
+            if (!data.muted)
+            {
+                Stream str = Properties.Resources.blip2;
+                System.Media.SoundPlayer snd = new System.Media.SoundPlayer(str);
+                snd.Play();
+            }
+
+            if (lvLaunchPrograms.SelectedItems.Count != 0)
+                RemoveLaunchProgram();
         }
     }
 }

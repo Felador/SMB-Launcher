@@ -13,8 +13,8 @@ namespace SMBLauncherProject
         public bool muted = false;
 
         public bool deleteDataOnPlay = false;
-        public bool openLivesplit = false;
-        public string livesplitLocation = "";
+
+        public List<LaunchProgram> launchPrograms;
 
         public Ctrls ctrls = new Ctrls();
 
