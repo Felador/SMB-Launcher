@@ -52,9 +52,13 @@
 ### Added
 - MINOR Minimise button.
 - MINOR Closes when SMB is launched.
+- MINOR Text describing each combo box in the controls menu.
 
 ### Changed
 - MINOR MainForm opens in the middle of the screen.
+- MINOR Livesplit launch removed.
+- MINOR Launch list for launching multiple programs at launch.
+- MINOR Relocated control menu combo boxes sleightly.
 
 ### Fixed
-- reimplemented autosearch.
+- PATCH reimplemented autosearch.

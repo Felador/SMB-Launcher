@@ -44,15 +44,15 @@ namespace SMBLauncherProject
                 }
             }
 
-            Size size = new Size(pSettings.Width, pSettings.Height - 50);
+            Size size = new Size(pSettings.Width, pSettings.Height - 40);
 
-            pSteamLocation.Location = new Point(3, 3);
+            pSteamLocation.Location = new Point(0, 0);
             pSteamLocation.Size = size;
 
-            pControls.Location = new Point(3, 3);
+            pControls.Location = new Point(0, 0);
             pControls.Size = size;
 
-            pLaunchOptions.Location = new Point(3, 3);
+            pLaunchOptions.Location = new Point(0, 0);
             pLaunchOptions.Size = size;
 
             if (data.steamLocation.Length == 0)
