@@ -93,6 +93,7 @@ namespace SMBLauncherProject
 
             cbDeleteSaveData.Checked = data.deleteDataOnPlay;
             cbDevmode.Checked = data.devmode;
+            cbCloseOnPlay.Checked = data.closeOnPlay;
 
             tbSteamLocation.Text = data.steamLocation;
 
@@ -351,7 +352,8 @@ namespace SMBLauncherProject
 
             process.Start();
 
-            Close();
+            if (data.closeOnPlay)
+                Close();
         }
 
         private void Save(object sender, EventArgs e)
@@ -563,6 +565,11 @@ namespace SMBLauncherProject
         private void CbDevmode_CheckedChanged(object sender, EventArgs e)
         {
             data.devmode = cbDevmode.Checked;
+        }
+
+        private void CbCloseOnPlay_CheckedChanged(object sender, EventArgs e)
+        {
+            data.closeOnPlay = cbCloseOnPlay.Checked;
         }
     }
 }

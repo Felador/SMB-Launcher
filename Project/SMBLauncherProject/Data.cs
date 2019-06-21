@@ -14,6 +14,7 @@ namespace SMBLauncherProject
 
         public bool deleteDataOnPlay = false;
         public bool devmode = false;
+        public bool closeOnPlay = false;
 
         public List<LaunchProgram> launchPrograms;
 

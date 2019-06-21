@@ -12,7 +12,7 @@ namespace SMBLauncherProject
     static class Program
     {
 
-        public static int _ID = 7;
+        public static int _ID = 8;
 
         [STAThread]
         static void Main(string[] args)

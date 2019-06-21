@@ -63,3 +63,12 @@
 
 ### Fixed
 - PATCH reimplemented autosearch.
+
+## [2.29.1.4] - 2019-06-21
+### Added
+- MINOR Close on play check box added to launch menu.
+
+### Changed
+- PATCH SMB no longer closes by default.
+
+### Fixed
